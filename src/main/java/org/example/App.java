@@ -22,7 +22,7 @@ public class App
         double euros = Double.parseDouble(eurosS);
         double exRate = Double.parseDouble(exRateS);
         //Based on c_to / c_from = rate
-        Double dollars = euros * exRate;
+        double dollars = euros * exRate;
         BigDecimal result = new BigDecimal(dollars).setScale(3, RoundingMode.HALF_UP);
         NumberFormat usdCostFormat = NumberFormat.getCurrencyInstance(Locale.US);
         usdCostFormat.setMinimumFractionDigits(1);
